@@ -18,13 +18,11 @@ public class CarShowroom {
             for (Vehicle vehicle : vehicle_list) {
                 comp = new_vehicle.compareTo(vehicle);
 
-                if (comp == 0) {
+                if (comp == 0) 
                     vehicle.amount++;
-                    new_vehicle.amount = vehicle.amount;
-                    break;
-                }
             }
-
+            
+            new_vehicle.amount = vehicle.amount;
             vehicle_list.add(new_vehicle);
             System.out.println("Dodano samochód!");
         }
