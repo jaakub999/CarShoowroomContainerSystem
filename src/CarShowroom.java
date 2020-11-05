@@ -31,24 +31,19 @@ public class CarShowroom {
             System.err.println("Nie można dodać nowego samochodu!");
     }
 
-    public void getProduct(String brand, String model) {
-        int comp;
-        Vehicle get_vehicle = new Vehicle(brand, model, null, 0, 0, 0, 0);
-
-        for (int i = 0; i < vehicle_list.size(); i++) {
-            comp = get_vehicle.compareTo(vehicle_list.get(i));
-
-            if (comp == 0) {
-                if(vehicle_list.get(i).amount > 1)
-                    vehicle_list.get(i).amount--;
-
-                else
-                    vehicle_list.remove(i);
-
-                System.out.println("Usunięto pojazd!");
+    public void getProduct(Vehicle vehicle) {
+        for (Vehicle v : vehicles){
+            if (vehicle.compareTo(v) == 0) {
+                v.amount--;
+            }
+        }
+        for (Vehicle v : vehicles){
+            if (vehicle.compareTo(v) == 0) {
+                vehicles.remove(v);
                 break;
             }
         }
+        System.out.println("Pojazd został usunięty!");
     }
 
     public void removeProduct(String brand, String model) {
