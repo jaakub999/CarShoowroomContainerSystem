@@ -32,14 +32,14 @@ public class CarShowroom {
     }
 
     public void getProduct(Vehicle vehicle) {
-        for (Vehicle v : vehicles){
+        for (Vehicle v : vehicle_list){
             if (vehicle.compareTo(v) == 0) {
                 v.amount--;
             }
         }
         for (Vehicle v : vehicles){
             if (vehicle.compareTo(v) == 0) {
-                vehicles.remove(v);
+                vehicle_list.remove(v);
                 break;
             }
         }
