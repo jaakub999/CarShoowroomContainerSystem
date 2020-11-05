@@ -37,7 +37,7 @@ public class CarShowroom {
                 v.amount--;
             }
         }
-        for (Vehicle v : vehicles){
+        for (Vehicle v : vehicle_list){
             if (vehicle.compareTo(v) == 0) {
                 vehicle_list.remove(v);
                 break;
