@@ -53,8 +53,10 @@ public class CarShowroom {
         for (int i = 0; i < vehicle_list.size(); i++) {
             comp = remove_vehicle.compareTo(vehicle_list.get(i));
 
-            if (comp == 0)
+            if (comp == 0) {
                 vehicle_list.remove(i);
+                i--;
+            }
         }
     }
 
